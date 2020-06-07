@@ -19,7 +19,7 @@
     <ul class="nav navbar-nav">
     	<li><a href="index.html">Home</a></li>
         <li><a href="workex.html">Professional Experience</a></li>
-	    <li class="active"><a href="#">Academic Projects</a></li>
+	    <li class="active"><a href="projects.html">Academic Projects</a></li>
 		<li><a href="research.html">Research</a></li>
 		<li><a href="Camellia_Debnath.pdf">CV</a></li>
     </ul>
@@ -31,6 +31,12 @@
 	p.ex1 {
   		padding-left: 300px;
   		padding-right: 300px;
+	}
+
+	p.ex2 {
+  		padding-left: 300px;
+  		padding-right: 300px;
+  		background: #F0F0F0;
 	}
 
 	h1 {
@@ -59,27 +65,54 @@
 	.table th:not([align]) {
 	  text-align: left;
 	}
+	div.div1 {
+		width:900px;
+    	height:900px;
+		background: #F0F0F0
+	}
 
 </style>
 
-<div class="fluid-row" id="header">
-<h1 class="title toc-ignore">Camellia Debnath</h1>
+<div style="width:1200px; margin:0 auto; background: #FFC300">
+	<p>This site is still being edited. Please visit <a href="https://github.com/dn-cam">Github</a> for a complete list of projects.</p>
 </div>
 
+<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
+	<h3>AhoyBot : A Chatbot using Seq2Seq Models </h3>
+	<p>AhoyBot is a chatbot written in Python, using the computational power of Se2Seq models, a type of Variational Auto Encoder which achieved phenomenal success in Machine Translation (<a href="https://towardsdatascience.com/day-1-2-attention-seq2seq-models-65df3f49e263#:~:text=A%20Seq2Seq%20model%20is%20a,outputs%20another%20sequence%20of%20items.&text=The%20encoder%20captures%20the%20context,then%20produces%20the%20output%20sequence.">here's a helpful guide </a>). AhoyBot was trained on the <a href="https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html">Cornell Movie Dialog dataset</a>, after translating the entire movie corpus using a Pirate language conversion dictionary.The goal behind this project was to find out if Seq2Seq models can learn to speak in a particular fashion, i.e. have some sort of "personality" in the way it responds. Another important aspect of this project is to be able to maintain conversational context beyond more than just the present question asked.</p>
 
-<p class="ex1"><em>Projects</em></p>
-<hr style="margin-left: 300px; margin-right: 300px" />
+	<p>The Seq2Seq model used in this project uses an encoder-decoder pair, each consiting of 2 LSTM-RNN layers, along with Luong Attention Mechanism to preserve context of a conversation. The model was implemented using PyTorch library in Python. After training the model for 300,000 iterations it was observed that the Chatbot gained considerable "Personality", but it still struggled in forming grammatically correct sentences. The latter was an expected result, since Seq2Seq models, being of Generative nature, take a long time to "learn" the grammar of a language.</p>	
+	<br/>
+	<a href="https://github.com/dn-cam/AhoyBot">Github</a>
+</div>
 
+<hr style="width: 1200px" />
 
-<hr style="margin-top: 20px; margin-left: 300px; margin-right: 300px" />
+<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
+	<h3>Course Recommendation Engine</h3>
+	<p>Recently there have been a huge array of online services offering courses that allegedly prepare an individual for a job as a Data Scientist. But it is still difficult for an individual starting out in this field from an unrelated background to make sound deci- sion regarding course choice that will maximize their chances of landing a Data Science related job. The course recommendation system aims to alleviate this problem by providing a list of recommended courses aimed at covering the skills the user is interested in learning for getting a job as a Data Scientist/Analyst, using the <a href="http://catalog.northeastern.edu/graduate/">Northeastern Univerity course catalog</a> for Data Science and Data Analytics related courses, and the <a href="https://www.kaggle.com/elroyggj/indeed-dataset-data-scientistanalystengineer">Indeed Job Dataset</a>. This recommendation system is not just based on matching the skills to courses, but also to jobs. In other words, when a user inputs a set of skills, the engine uses K-Means clustering to find which category of Jobs those skills belong to, and finds the list of courses that will cover those topics.</p>	
+	<br/>
+	<a href="https://github.com/dn-cam/CourseRecommender">Github</a>
+</div>
+<hr style="width: 1200px" />
 
-<p class="ex1"> This site is under repair 🛠️ </p>
-<p class="ex1"> It will be up shortly </p>
+<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
+	<h3>Quora Insincerity Detection</h3>
+	<p>Insincerity detection in a dataset consisting of Quora question texts, using various binary classification methods such as Multi Layer Perceptron, Logistic Regression, LSTM RNN. This project also uses K-means clustering to gauge if we can spot two clear clusters in the dataset. </p>	
+	<a href="https://github.com/dn-cam/QuoraInsincereQuestion">Github</a>
+</div>
+<hr style="width: 1200px" />
 
+<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
+	<h3>Intel Image Classification </h3>
+	<p>Multi-class Image Classification on the Intel Image dataset, using Python's OpenCV and Keras CNN libraries. This project explores different ways of adding/rearranging the layers of a Keras Sequential model, and how it effects the accuracy of the model. </p>	
+	<a href="https://github.com/dn-cam/ImageClassification">Github</a>
+</div>
+<hr style="width: 1200px" />
 
-<hr style="margin-left: 300px; margin-right: 300px" />
 
 </body>
 </html>
+
 
 
