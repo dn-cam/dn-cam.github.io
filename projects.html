@@ -73,10 +73,6 @@
 
 </style>
 
-<div style="width:1200px; margin:0 auto; background: #FFC300">
-	<p>This site is still being edited. Please visit <a href="https://github.com/dn-cam">Github</a> for a complete list of projects.</p>
-</div>
-
 <div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
 	<h3>AhoyBot : A Chatbot using Seq2Seq Models </h3>
 	<p>AhoyBot is a chatbot written in Python, using the computational power of Se2Seq models, a type of Variational Auto Encoder which achieved phenomenal success in Machine Translation (<a href="https://towardsdatascience.com/day-1-2-attention-seq2seq-models-65df3f49e263#:~:text=A%20Seq2Seq%20model%20is%20a,outputs%20another%20sequence%20of%20items.&text=The%20encoder%20captures%20the%20context,then%20produces%20the%20output%20sequence.">here's a helpful guide </a>). AhoyBot was trained on the <a href="https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html">Cornell Movie Dialog dataset</a>, after translating the entire movie corpus using a Pirate language conversion dictionary.The goal behind this project was to find out if Seq2Seq models can learn to speak in a particular fashion, i.e. have some sort of "personality" in the way it responds. Another important aspect of this project is to be able to maintain conversational context beyond more than just the present question asked.</p>
@@ -90,7 +86,7 @@
 
 <div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
 	<h3>Course Recommendation Engine</h3>
-	<p>Recently there have been a huge array of online services offering courses that allegedly prepare an individual for a job as a Data Scientist. But it is still difficult for an individual starting out in this field from an unrelated background to make sound deci- sion regarding course choice that will maximize their chances of landing a Data Science related job. The course recommendation system aims to alleviate this problem by providing a list of recommended courses aimed at covering the skills the user is interested in learning for getting a job as a Data Scientist/Analyst, using the <a href="http://catalog.northeastern.edu/graduate/">Northeastern Univerity course catalog</a> for Data Science and Data Analytics related courses, and the <a href="https://www.kaggle.com/elroyggj/indeed-dataset-data-scientistanalystengineer">Indeed Job Dataset</a>. This recommendation system is not just based on matching the skills to courses, but also to jobs. In other words, when a user inputs a set of skills, the engine uses K-Means clustering to find which category of Jobs those skills belong to, and finds the list of courses that will cover those topics.</p>	
+	<p>Recently there have been a huge array of online services offering courses that allegedly prepare an individual for a job as a Data Scientist. But it is still difficult for an individual starting out in this field from an unrelated background to make sound deci- sion regarding course choice that will maximize their chances of landing a Data Science related job. The course recommendation system aims to alleviate this problem by providing a list of recommended courses aimed at covering the skills the user is interested in learning for getting a job as a Data Scientist/Analyst, using the <a href="http://catalog.northeastern.edu/graduate/">Northeastern Univerity course catalog</a> for Data Science and Data Analytics related courses, and the <a href="https://www.kaggle.com/elroyggj/indeed-dataset-data-scientistanalystengineer">Indeed Job Dataset</a>. This recommendation system is not just based on matching the skills to courses, but also to jobs. In other words, when a user inputs a set of skills, the engine uses K-Means clustering to find which category of Jobs those skills belong to, and finds the list of courses that will cover those topics using cosine similarities. This recommendation system is intended to help users select courses for landing specific Data Science related jobs.</p>	
 	<br/>
 	<a href="https://github.com/dn-cam/CourseRecommender">Github</a>
 </div>
@@ -98,17 +94,32 @@
 
 <div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
 	<h3>Quora Insincerity Detection</h3>
-	<p>Insincerity detection in a dataset consisting of Quora question texts, using various binary classification methods such as Multi Layer Perceptron, Logistic Regression, LSTM RNN. This project also uses K-means clustering to gauge if we can spot two clear clusters in the dataset. </p>	
+	<p>Quora is a public question answer forum where anyone with an account can post questions or answers related to various topics, such as science, religion, politics, sports etc. With such a wide range of topics being discussed without any sort of regulation, quite often we observe questions or answers with insincere tones to them, i.e., questions or answers that are not neutral in nature, contains direct or indirect discrimination against some demography, or absurdity that is not grounded in reality. In this project, we aimed to build a binary classification model that successfully classifies Quora Texts into “sincere” and “insincere”. We worked with a <a href="https://www.kaggle.com/c/quora-insincere-questions-classification/data">dataset</a> provided by Quora on Kaggle, and fit various supervised and unsupervised machine learning classification models on the dataset. We compared the models on their ability to predict “sincere” vs “insincere” text on unseen data, and found out that Long Short Term Memory Recurrent Neural Networks (LSTM RNNs) gives the best results.This project also uses K-means clustering to gauge if we can spot two clear clusters in the dataset. </p>	
 	<a href="https://github.com/dn-cam/QuoraInsincereQuestion">Github</a>
 </div>
 <hr style="width: 1200px" />
 
 <div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
+	<h3>Bankruptcy Prediction on Polish Financial Dataset </h3>
+	<p>The financial health of any company is reflected in its revenue, net and gross profits, liabilities and various other econometric measures. Those measures, in turn, can be used to make judgments regarding how the company is performing in the market, and also how they might perform in the future. This project analyses the results for Bankruptcy Prediction for Polish Companies in the emerging markets. The dataset being highly imbalanced (minority class less than 6% of the dataset), Synthetic Minority Oversamplng Technique (SMOTE) was used to resolve the class imbalance issue. The predictions were based on 64 econometric ratios published by those companies, and various supervised machine learning classification models were compared for this task, starting from the simple Logistic Regression, Naive Bayes to the more complex Neural Network. Quadratic Discriminant Analysis gave the best performance when it came to predicting correctly.</p>	
+	<a href="https://github.com/dn-cam/BankruptcyPrediction">Github</a>
+</div>
+<hr style="width: 1200px" />
+
+<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
 	<h3>Intel Image Classification </h3>
-	<p>Multi-class Image Classification on the Intel Image dataset, using Python's OpenCV and Keras CNN libraries. This project explores different ways of adding/rearranging the layers of a Keras Sequential model, and how it effects the accuracy of the model. </p>	
+	<p>This project deals with the Multi-class Image Classification problem, on the Intel Image dataset, using Python's OpenCV and Keras CNN libraries. This project explores different ways of adding/rearranging the layers of a Keras Sequential model, and how it effects the accuracy of the model. </p>	
 	<a href="https://github.com/dn-cam/ImageClassification">Github</a>
 </div>
 <hr style="width: 1200px" />
+
+<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
+	<h3>IMDB Movie Review Classification</h3>
+	<p>Classifying the positive and negative reviews in the IMDB Movie review dataset using Python's Natural Language Processing Framework NLTL for data pre-processing, Bag of Words and TF-IDF Vectorizations and classifier models such as Logistic Regression, Support Vector Machines and Random Forests.</p>	
+	<a href="https://github.com/dn-cam/IMDB_Movie_Review_Classification">Github</a>
+</div>
+<hr style="width: 1200px" />
+
 
 
 </body>
