@@ -1,112 +1,191 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Camellia Debnath</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Camellia Debnath</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Camellia Debnath</a>
-    </div>
-    <ul class="nav navbar-nav">
-    	<li><a href="index.html">Home</a></li>
-    	<li><a href="projects.html">Projects</a></li>
-        <li class="active"><a href="workex.html">Professional Experience</a></li>
-		<li><a href="research.html">Research</a></li>
-		<li><a href="CV.html">Resumé</a></li>
-		<li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Camellia Debnath</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li class="active"><a href="workex.html">Professional Experience</a></li>
+				<li><a href="research.html">Research</a></li>
+				<li><a href="CV.html">Resumé</a></li>
+				<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
 
 
-<style type="text/css">
-	p.ex1 {
-  		padding-left: 300px;
-  		padding-right: 300px;
-	}
+	<style type="text/css">
+		h1 {
+			font-size: 34px;
 
-	h1 {
-	  font-size: 34px;
-	  padding-left: 300px;
-  	  padding-right: 300px;
-	}
-	h1.title {
-	  font-size: 38px;
-	}
-	h2 {
-	  font-size: 30px;
-	}
-	h3 {
-	  font-size: 24px;
-	}
-	h4 {
-	  font-size: 18px;
-	}
-	h5 {
-	  font-size: 16px;
-	}
-	h6 {
-	  font-size: 12px;
-	}
-	.table th:not([align]) {
-	  text-align: left;
-	}
+		}
 
-</style>
+		h1.title {
+			font-size: 38px;
+		}
 
-<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
-	<h2>Amazon, Seattle</h2> 
-	<p>Identity Services</p>
-	<i>(Oct 20 - Present)</i>
-	<hr style="width: 900px; background-color: #9B9B9B"></hr>
-	<h5>Authentication Services</h5>
-	<p> Currently working in Identity Services at Amazon, specifically with the Authentication Service team, on various projects to improve and maintain highest standards of user authentication experience for Amazon retail and its subsidieries.
+		h2 {
+			font-size: 30px;
+		}
 
-	</p>
+		h3 {
+			font-size: 24px;
+		}
 
-</div>
+		h4 {
+			font-size: 18px;
+		}
+
+		h5 {
+			font-size: 16px;
+		}
+
+		h6 {
+			font-size: 12px;
+		}
+
+		.table th:not([align]) {
+			text-align: left;
+		}
 
 
-<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
-	<h2>Fidelity, Boston</h2> 
-	<p>Advanced Technologies Investment Management</p>
-	<i>(June 19 - Dec 19)</i>
-	<hr style="width: 900px; background-color: #9B9B9B"></hr>
-	<h5>Market Simulation using Deep Reinforcement Learning Agents</h5>
-	<p> Predicting market movements using historical data suffers from lack of knowledge that may arise due to unforseen events in the future. One way to overcome this problem is to supplement this with simulated market data from deep reinforcement agent simulations. My project involved designing a framework for training Deep Reinforcement Learning (DRL) network in agent-based price-order-book simulations. In this framework, the market acts as the environment while a DRL network acts as an agent that places order to the market. The agent tries to maximize rewards using feedback from the market outcomes. The DRL agent is constructed as an A2C (Advantage-Actor-Critic Network) that uses LSTM and CNN blocks for feature extraction.
+		@media only screen and (min-device-width: 490px) {
+			.content {
+				width: 80%;
+				margin: auto;
+			}
 
-	</p>
+			img {
+				border: 1px solid black;
+				width: 100%;
+				height: auto;
+				animation-name: swing;
+				animation-duration: 2s;
+				animation-iteration-count: 1;
+			}
+		}
 
-</div>
+		@media only screen and (max-device-width: 490px) {
+			.content {
+				width: 100%;
+				margin: auto;
+				padding: 20px;
+			}
 
-<div style="width:1200px; margin:0 auto; background:#F0F0F0; padding: 5px ">
-	<h2>Citicorp, Pune</h2> 
-	<p>Capital Markets Operations and Technology</p>
-	<i>(July 15 - July 18)</i>
-	<hr style="width: 900px; background-color: #9B9B9B"></hr>
-	<h5>Brokerage Calculation Engine</h5>
-	<p> Capital Markets involve a large number of transactions involving brokerage fees, where the bank can act either as a broker, or need services of another broker. Both these cases involve large amount of brokerage fees. Brokerage fees are dependent on many factors, such as the kind of transaction, the parties involved, the geographical location etc. I created Brokerage Calculation Preview Engine using Predictive modeling in R using R's dplyr and dbplyr libraries. This involved preprocessing a dataset consisting of a large number of features, feature engineering and best subset selection. I also implemented Lasso Regression for feature subsetting to handle the large feature issue.  </p>
-	<br/>
-	<h5>Automated Testcase Generation </h5>
-	<p> This project involved designing a A Natural Language Processing framework for generating testcases. In many project workflows, the communication gap between the Quality Assessment Team and the Development Team can lead to significant latencies, in terms of  integration testing. I was part of a team that designed a Java framework using the Apache Jenna and Stanford Parser libraries to perform Parts of Speech (POS) tagging and generate semantic knowledge graphs, querying the knowledge graph to create Gherkin scripts which are then fed into Cucumber test runner to generate JUnit Testcases.</p>
-	<br/>
-	<h5>Real-Time Processing of Big Data for Auditing </h5>
-	<p> Trade Auditing in the financial sector is a time sensitive process that can benefit from moving to real-time processing from batch-processing. This project involved converting +1 day batch processing of large volume of Audit data from batch processing to real-time processing using Apache Storm and Kafka. Apache Storm is an open source distributed realtime computation system which makes it easy to reliably process unbounded streams of data, doing for realtime processing what Hadoop does for batch processing. A Storm Topology consists of spouts and bolts. A spout is a source of streams in a computation, and a bolt processes any number of input streams and produces any number of new output streams. Most of the logic of a computation goes into bolts, such as functions, filters, streaming joins, streaming aggregations, talking to databases, and so on. Apache Kafka was used as messaging service for this project, and MongoDB was used for persisting the data.</p>
-	<br/>
-</div>
+			img {
+				border: 1px solid black;
+				width: 100%;
+				height: auto;
+			}
+		}
+	</style>
 
-<hr style="width: 1200px" />
+	<div class="content">
+		<div style="width:100%; margin:0 auto; background:#F0F0F0; padding: 5px ">
+			<h2>Amazon, Seattle</h2>
+			<p>Identity Services</p>
+			<i>(Oct 20 - Present)</i>
+			<hr style="background-color: #9B9B9B">
+			<h5>Authentication Services</h5>
+			<p> Currently working in Identity Services at Amazon, specifically with the Authentication Service team, on
+				various projects to improve and maintain highest standards of user authentication experience for Amazon
+				retail and its subsidieries.
+
+			</p>
+
+		</div>
+
+
+		<div style="width:100%; margin:0 auto; background:#F0F0F0; padding: 5px ">
+			<h2>Fidelity, Boston</h2>
+			<p>Advanced Technologies Investment Management</p>
+			<i>(June 19 - Dec 19)</i>
+			<hr style="background-color: #9B9B9B">
+			<h5>Market Simulation using Deep Reinforcement Learning Agents</h5>
+			<p> Predicting market movements using historical data suffers from lack of knowledge that may arise due to
+				unforseen events in the future. One way to overcome this problem is to supplement this with simulated
+				market
+				data from deep reinforcement agent simulations. My project involved designing a framework for training
+				Deep
+				Reinforcement Learning (DRL) network in agent-based price-order-book simulations. In this framework, the
+				market acts as the environment while a DRL network acts as an agent that places order to the market. The
+				agent tries to maximize rewards using feedback from the market outcomes. The DRL agent is constructed as
+				an
+				A2C (Advantage-Actor-Critic Network) that uses LSTM and CNN blocks for feature extraction.
+
+			</p>
+
+		</div>
+
+		<div style="width:100%; margin:0 auto; background:#F0F0F0; padding: 5px ">
+			<h2>Citicorp, Pune</h2>
+			<p>Capital Markets Operations and Technology</p>
+			<i>(July 15 - July 18)</i>
+			<hr style="background-color: #9B9B9B">
+			<h5>Brokerage Calculation Engine</h5>
+			<p> Capital Markets involve a large number of transactions involving brokerage fees, where the bank can act
+				either as a broker, or need services of another broker. Both these cases involve large amount of
+				brokerage
+				fees. Brokerage fees are dependent on many factors, such as the kind of transaction, the parties
+				involved,
+				the geographical location etc. I created Brokerage Calculation Preview Engine using Predictive modeling
+				in R
+				using R's dplyr and dbplyr libraries. This involved preprocessing a dataset consisting of a large number
+				of
+				features, feature engineering and best subset selection. I also implemented Lasso Regression for feature
+				subsetting to handle the large feature issue. </p>
+			<br />
+			<h5>Automated Testcase Generation </h5>
+			<p> This project involved designing a A Natural Language Processing framework for generating testcases. In
+				many
+				project workflows, the communication gap between the Quality Assessment Team and the Development Team
+				can
+				lead to significant latencies, in terms of integration testing. I was part of a team that designed a
+				Java
+				framework using the Apache Jenna and Stanford Parser libraries to perform Parts of Speech (POS) tagging
+				and
+				generate semantic knowledge graphs, querying the knowledge graph to create Gherkin scripts which are
+				then
+				fed into Cucumber test runner to generate JUnit Testcases.</p>
+			<br />
+			<h5>Real-Time Processing of Big Data for Auditing </h5>
+			<p> Trade Auditing in the financial sector is a time sensitive process that can benefit from moving to
+				real-time
+				processing from batch-processing. This project involved converting +1 day batch processing of large
+				volume
+				of Audit data from batch processing to real-time processing using Apache Storm and Kafka. Apache Storm
+				is an
+				open source distributed realtime computation system which makes it easy to reliably process unbounded
+				streams of data, doing for realtime processing what Hadoop does for batch processing. A Storm Topology
+				consists of spouts and bolts. A spout is a source of streams in a computation, and a bolt processes any
+				number of input streams and produces any number of new output streams. Most of the logic of a
+				computation
+				goes into bolts, such as functions, filters, streaming joins, streaming aggregations, talking to
+				databases,
+				and so on. Apache Kafka was used as messaging service for this project, and MongoDB was used for
+				persisting
+				the data.</p>
+			<br />
+		</div>
+	</div>
+
+	<hr style="width: 1200px" />
 
 </body>
+
 </html>
-
-
