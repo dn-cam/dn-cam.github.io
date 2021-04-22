@@ -1,91 +1,144 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Camellia Debnath</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Camellia Debnath</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Camellia Debnath</a>
-    </div>
-    <ul class="nav navbar-nav">
-    	<li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="workex.html">Professional Experience</a></li>
-		<li class="active"><a href="#">Research</a></li>
-		<li><a href="CV.html">Resumé</a></li>
-		<li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Camellia Debnath</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="workex.html">Professional Experience</a></li>
+				<li class="active"><a href="#">Research</a></li>
+				<li><a href="CV.html">Resumé</a></li>
+				<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
 
 
-<style type="text/css">
-	p.ex1 {
-  		padding-left: 300px;
-  		padding-right: 300px;
-	}
+	<style type="text/css">
+		h1 {
+			font-size: 34px;
+		}
 
-	h1 {
-	  font-size: 34px;
-	  padding-left: 300px;
-  	  padding-right: 300px;
-	}
-	h1.title {
-	  font-size: 38px;
-	}
-	h2 {
-	  font-size: 30px;
-	}
-	h3 {
-	  font-size: 24px;
-	}
-	h4 {
-	  font-size: 18px;
-	}
-	h5 {
-	  font-size: 16px;
-	}
-	h6 {
-	  font-size: 12px;
-	}
-	.table th:not([align]) {
-	  text-align: left;
-	}
+		h1.title {
+			font-size: 38px;
+		}
 
-</style>
+		h2 {
+			font-size: 30px;
+		}
 
-<div class="fluid-row" id="header">
-<h1 class="title toc-ignore">Camellia Debnath</h1>
-</div>
+		h3 {
+			font-size: 24px;
+		}
+
+		h4 {
+			font-size: 18px;
+		}
+
+		h5 {
+			font-size: 16px;
+		}
+
+		h6 {
+			font-size: 12px;
+		}
+
+		.table th:not([align]) {
+			text-align: left;
+		}
+
+		@media only screen and (min-device-width: 490px) {
+			.content {
+				width: 60%;
+				margin: auto;
+			}
+
+			img {
+				border: 1px solid black;
+				width: 100%;
+				height: auto;
+				animation-name: swing;
+				animation-duration: 2s;
+				animation-iteration-count: 1;
+			}
+		}
+
+		@media only screen and (max-device-width: 490px) {
+			.content {
+				width: 100%;
+				margin: auto;
+				padding: 20px;
+			}
+
+			img {
+				border: 1px solid black;
+				width: 100%;
+				height: auto;
+			}
+		}
+		
+	</style>
+
+	<div class="content">
+		<div class="fluid-row" id="header">
+			<h1 class="title toc-ignore">Camellia Debnath</h1>
+		</div>
+
+		<p><em>Research</em></p>
+		<hr />
 
 
-<p class="ex1"><em>Research</em></p>
-<hr style="margin-left: 300px; margin-right: 300px" />
-
-<center>
-	<figure>
-		<img style="border: 1px solid black"  src="alphazero.png" width="850" height="310" /> 
-		<figcaption>Fig. One Neural MCTS iteration in AlphaGo Zero. Diagram courtesy of DeepMind.</figcaption>
-	</figure>
-</center>
-
-<hr style="margin-top: 20px; margin-left: 300px; margin-right: 300px" />
-
-<p class="ex1"> Camellia is currently a part of Dr Karl Lieberherr's research team at Northeastern, working on Deep Reinforcement Learning algorithms, such as Neural Monte Carlo Tree Search and its various applications, especially on combinatorial optimization problems. Her research work included an implementation of Neural Monte Carlo Tree Search (MCTS) algorithm developed by Google's Deep Mind, popularly known as AlphaGo Zero. The research involved converting a combinatorial optimization problem into a Zermelo two-player Game, and training Neural MCTS "learn" the game through self-play. A fine grained evauation of the Neural MCTS is also a significant part of her research. The combinatorial optimization problem used for this purpose is the Highest Safe Rung (HSR) problem. HSR belongs to a set of combinatorial optimization games for which the ground-truth is known, meaning that for each move by the proponent and opponent, one can evaluate if the move was good or bad (as opposed to games like Chess or Go, where one does not know whether a move is bad or good unless it leads to a win or loss, rspectively). This makes problems like HSR a good candidate to observe the internal learning mechanism of Neural MCTS, such as bottom-up learning, learning transer etc. More details can be found in this paper:  <a href="Fine-Grained-Evaluation-of-Neural_Monte-Carlo-Tree-Search-Algorithms-for-Combinatorial-Optimization-Problems.pdf">Fine-Grained Evaluation of Neural Monte Carlo Tree Search Algorithms for Combinatorial Optimization Problems</a></p>
+		<figure>
+			<img src="alphazero.png" align='center'/>
+			<figcaption>Fig. One Neural MCTS iteration in AlphaGo Zero. Diagram courtesy of DeepMind.</figcaption>
+		</figure>
 
 
-<hr style="margin-left: 300px; margin-right: 300px" />
+		<hr/>
+
+		<p class="ex1"> Camellia is currently a part of Dr Karl Lieberherr's research team at Northeastern, working on
+			Deep
+			Reinforcement Learning algorithms, such as Neural Monte Carlo Tree Search and its various applications,
+			especially on combinatorial optimization problems. Her research work included an implementation of Neural
+			Monte
+			Carlo Tree Search (MCTS) algorithm developed by Google's Deep Mind, popularly known as AlphaGo Zero. The
+			research involved converting a combinatorial optimization problem into a Zermelo two-player Game, and
+			training
+			Neural MCTS "learn" the game through self-play. A fine grained evauation of the Neural MCTS is also a
+			significant part of her research. The combinatorial optimization problem used for this purpose is the
+			Highest
+			Safe Rung (HSR) problem. HSR belongs to a set of combinatorial optimization games for which the ground-truth
+			is
+			known, meaning that for each move by the proponent and opponent, one can evaluate if the move was good or
+			bad
+			(as opposed to games like Chess or Go, where one does not know whether a move is bad or good unless it leads
+			to
+			a win or loss, rspectively). This makes problems like HSR a good candidate to observe the internal learning
+			mechanism of Neural MCTS, such as bottom-up learning, learning transer etc. More details can be found in
+			this
+			paper: <a
+				href="Fine-Grained-Evaluation-of-Neural_Monte-Carlo-Tree-Search-Algorithms-for-Combinatorial-Optimization-Problems.pdf">Fine-Grained
+				Evaluation of Neural Monte Carlo Tree Search Algorithms for Combinatorial Optimization Problems</a></p>
+
+
+		<hr/>
+	</div>
 
 </body>
+
 </html>
-
-
