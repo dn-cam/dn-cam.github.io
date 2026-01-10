@@ -1,18 +1,121 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Camellia Debnath</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400&display=swap" rel="stylesheet">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Type scale from your older file */
+    h1 { font-size: 34px; }
+    h1.title { font-size: 38px; }
+    h2 { font-size: 30px; }
+    h3 { font-size: 24px; }
+    h4 { font-size: 18px; }
+    h5 { font-size: 16px; }
+    h6 { font-size: 12px; }
+    .table th:not([align]) { text-align: left; }
+
+    /* container + button row (kept from older version) */
+    .cv-wrap { width: 50%; max-width: 900px; margin: 30px auto; }
+    .cv-actions { margin: 10px 0 25px; }
+
+    /* --- Brief resume summary --- */
+    .cv-summary {
+      background: #ffffff;
+      border: 1px solid #e6eef6;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 16px 0 20px;
+      color: #2b2b2b;
+      line-height: 1.55;
+    }
+
+    .cv-summary {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.55;
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    }
+
+
+
+    /* item wrapper */
+    .tl-item {
+      position: relative;
+      width: 50%;
+      padding: 20px 30px;
+    }
+    .tl-item.left  { left: 0; }
+    .tl-item.right { left: 50%; }
+
+    /* content card */
+    .tl-card {
+      background: #f9fbfd;
+      border: 1px solid #e6eef6;
+      border-radius: 8px;
+      padding: 18px 20px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .tl-card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+    .tl-card .meta {
+      font-size: 13px;
+      color: #5f6c7b;
+      margin-bottom: 8px;
+    }
+    .tl-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .tl-card li { margin-bottom: 6px; line-height: 1.45; }
+
+    /* milestone dot */
+    .tl-item::after {
+      content: '';
+      position: absolute;
+      top: 26px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid #2b8aef;
+      z-index: 2;
+    }
+    .tl-item.left::after  { right: -8px; }
+    .tl-item.right::after { left: -8px; }
+
+    /* responsive: stack to single column */
+    @media (max-width: 992px) {
+      .cv-wrap { width: 90%; }
+    }
+    @media (max-width: 768px) {
+      .timeline::after { left: 28px; transform: none; }
+      .tl-item { width: 100%; left: 0; padding-left: 60px; padding-right: 15px; }
+      .tl-item::after { left: 20px; right: auto; }
+    }
+  </style>
+
+  <script>
+    function requestResume() {
+      alert("Thanks for reaching out, and I'll get back to you soon!");
+      return true; // let the mail client open
+    }
+  </script>
 </head>
-
 <body>
-
+  <!-- Nav pane kept exactly as requested -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -27,57 +130,31 @@
     </div>
   </nav>
 
-
-  <style type="text/css">
-    h1 {
-      font-size: 34px;
-    }
-
-    h1.title {
-      font-size: 38px;
-    }
-
-    h2 {
-      font-size: 30px;
-    }
-
-    h3 {
-      font-size: 24px;
-    }
-
-    h4 {
-      font-size: 18px;
-    }
-
-    h5 {
-      font-size: 16px;
-    }
-
-    h6 {
-      font-size: 12px;
-    }
-
-    .table th:not([align]) {
-      text-align: left;
-    }
-
-    div.div1 {
-      width: 900px;
-      height: 900px;
-      background: #F0F0F0
-    }
-  </style>
+  <div class="cv-wrap">
+    <div class="cv-summary">
+      <p>
+        I currently work in Microsoft's Core Search and AI org, focusing on improving search relevance. My position is a research based one which involves manipulating LLMs and SLMs to deliver high quality search ranking without sacrificing latency.
+        <br><br>Before that, I worked on advertising trust and operational machine learning problems, where the goal was to make large-scale decision systems both safer and more efficient. I helped build systems that reduced manual review and cost while improving precision, using a mix of adversarial exploration, multimodal filtering, and forecasting methods.
+        Earlier in my career, I worked on NLP-driven automation in an enterprise engineering setting, focusing on translating natural-language requirements into structured representations and executable test cases. This work aimed to reduce coordination overhead and improve delivery speed across teams.
+        <br><br>Please feel free to send me an email through the button below for a full resume, and I'll get back to you soon.
+        <br><br>
+      </p>
+    </div>
+    <!-- Request button kept from older version -->
+    <div class="cv-actions">
+      <a
+        class="btn btn-primary"
+        href="mailto:debnathc1@gmail.com?subject=Resume%20Request&body=Hi%20Camellia%2C%0A%0ACould%20you%20please%20share%20your%20full%20resume%3F%0A%0AThanks!"
+        onclick="return requestResume();"
+        title="Request full resume by email"
+      >
+        Request Full Resume
+      </a>
+    </div>
+    
+      
 
 
-
-  <div style="width: 50%; margin: auto; text-align: left">
-
-    <p style="text-align: center; font-size: 1.2em; color: #666; margin-top: 50px;">
-  Updated resume coming soon 🙃
-</p>
   </div>
-
-
 </body>
-
 </html>

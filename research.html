@@ -8,6 +8,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400&display=swap" rel="stylesheet">
+	<script>
+    function requestResume() {
+      alert("Thanks for reaching out, and I'll get back to you soon!");
+      return true; // let the mail client open
+    }
+  </script>
 </head>
 
 <body>
@@ -89,6 +99,17 @@
 				height: auto;
 			}
 		}
+		.cv-actions { margin: 10px 0 25px; }
+
+		.cv-summary {
+	      margin: 0;
+	      font-size: 1.5rem;
+	      font-weight: 400;
+	      line-height: 1.55;
+	      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+	    }
+
+
 		
 	</style>
 
@@ -118,46 +139,43 @@
 		    </style>
 		</head>
 		<body>
-		    <div class="fluid-row" id="header">
-		        <h1 class="title toc-ignore">Neural MCTS Evaluation</h1>
-		        <button class="btn" type="submit" onclick="window.open('Fine-Grained-Evaluation-of-Neural_Monte-Carlo-Tree-Search-Algorithms-for-Combinatorial-Optimization-Problems.pdf')">Download Paper</button>
-		    </div>
-
-
-		<p><em>Research</em></p>
+		<p><em>Academic Research</em></p>
 		<hr />
 
 
 		<figure>
 			<img src="alphazero.png" align='center'/>
-			<figcaption>Fig. One Neural MCTS iteration in AlphaGo Zero. Diagram courtesy of DeepMind.</figcaption>
+			<figcaption class="cv-summary">Fig. One Neural MCTS iteration in AlphaGo Zero. Diagram courtesy of DeepMind.</figcaption>
 		</figure>
 
 
 		<hr/>
 
-		<p class="ex1"> Camellia was a part of Dr Karl Lieberherr's research team at Northeastern, working on
-			Deep
-			Reinforcement Learning algorithms, such as Neural Monte Carlo Tree Search and its various applications,
-			especially on combinatorial optimization problems. Her research work included an implementation of Neural
-			Monte
-			Carlo Tree Search (MCTS) algorithm developed by Google's Deep Mind, popularly known as AlphaGo Zero. The
+		<p class="cv-summary"> I was a part of Dr Karl Lieberherr's research team at Northeastern, working on
+			Deep Reinforcement Learning algorithms, such as Neural Monte Carlo Tree Search and its various applications,
+			especially on combinatorial optimization problems. My research work included an implementation of Neural
+			Monte Carlo Tree Search (MCTS) algorithm developed by Google's Deep Mind, popularly known as AlphaGo Zero. The
 			research involved converting a combinatorial optimization problem into a Zermelo two-player Game, and
-			training
-			Neural MCTS "learn" the game through self-play. A fine grained evauation of the Neural MCTS is also a
-			significant part of her research. The combinatorial optimization problem used for this purpose is the
-			Highest
-			Safe Rung (HSR) problem. HSR belongs to a set of combinatorial optimization games for which the ground-truth
-			is
-			known, meaning that for each move by the proponent and opponent, one can evaluate if the move was good or
-			bad
-			(as opposed to games like Chess or Go, where one does not know whether a move is bad or good unless it leads
-			to
-			a win or loss, rspectively). This makes problems like HSR a good candidate to observe the internal learning
-			mechanism of Neural MCTS, such as bottom-up learning, learning transer etc. Please download the paper using the top right link for more details.</p>
+			training Neural MCTS to "learn" the game through self-play. A fine grained evauation of the Neural MCTS was also a
+			significant part of my research. The combinatorial optimization problem used for this purpose is the
+			Highest Safe Rung (HSR) problem. HSR belongs to a set of combinatorial optimization games for which the ground-truth
+			is known, meaning that for each move by the proponent and opponent, one can evaluate if the move was good or
+			bad (as opposed to games like Chess or Go, where one does not know whether a move is bad or good unless it leads
+			to a win or loss, rspectively). This makes problems like HSR a good candidate to observe the internal learning
+			mechanism of Neural MCTS, such as bottom-up learning, learning transer etc. Please request a pdf of the full paper using the button below for more details.</p>
 
 
 		<hr/>
+		<div class="cv-actions">
+		      <a
+		        class="btn btn-primary"
+		        href="mailto:debnathc1@gmail.com?subject=Paper%20Request&body=Hi%20Camellia%2C%0A%0ACould%20you%20please%20share%20your%20neural%20MCTS%20Evalauation%20paper%3F%0A%0AThanks!"
+		        onclick="return requestResume();"
+		        title="Request full paper by email"
+		      >
+		        Request Full Paper
+		      </a>
+		    </div>
 	</div>
 
 </body>

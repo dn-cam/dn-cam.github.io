@@ -2,6 +2,10 @@
 <html>
 
 <head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400&display=swap" rel="stylesheet">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -120,32 +124,374 @@
 		.table th:not([align]) {
 			text-align: left;
 		}
+
+		.cv-summary {
+	      margin: 0;
+	      font-size: 1.5rem;
+	      font-weight: 400;
+	      line-height: 1.55;
+	      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+	    }
+
 	</style>
 	<div class="content">
 		<div class="fluid-row" id="header">
-			<h1 class="title toc-ignore">Camellia Debnath</h1>
-			<p class="ex1"><em>Senior Applied Scientist at Microsoft</em></p>
+			<p class="cv-summary">
+			<img src="cam_pic.jpg" class="profile-img" alt="Profile picture" />
+			I am currently working as a Senior Applied Scientist on Microsoft’s Core Search & AI team. Previously, I worked at Amazon in Ads Trust, as a Data Scientist. I did my Masters from The Khoury College of Computer Sciences at Northeastern University, majoring in Data Science. I was a Spring'20 Graduate Research Fellow at Khoury. I was a part of Dr Karl Lieberherr's research team, working on Neural Monte Carlo Tree Search and its applications on combinatorial optimization problems.
+			</p>
+
 		</div>
-		<hr />
-
-
-		<div class="img" align='center'>
-			<img src="cam_pic.jpg" align='center' />
-		</div>
-
-
-
-		<hr style="margin-top: 20px;" align="center" />
-
-		<p class="ex1"> I am currently working as a Senior Applied Scientist on Microsoft’s Core Search & AI team. Previously, I worked at Amazon in Ads Trust, primarily in content moderation. I did my Masters from The Khoury College of Computer Sciences at Northeastern Univerisity, majoring in Data Science. I was a Spring'20 Graduate Research Fellow at Khoury. I was a part of Dr Karl Lieberherr's research team, working on Neural Monte Carlo Tree Search and its applications on combinatorial optimization problems.</p>
-
-		<p class="ex1">I currently live in Seattle, and try to mtake advantage of everything that Pacific Northwest has to offer. A recent highlight? Watching the Northern Lights from my balcony. </p>
-
+		<hr/>
+		<p class="cv-summary">
+			I currently live in Seattle, and try to take advantage of everything that Pacific Northwest has to offer. A recent highlight? Watching the Northern Lights from my balcony.
+		</p>
 
 		<hr style="margin-left: 300px; margin-right: 300px" />
 
+		<section class="articles" aria-label="Recent Articles">
+  <h2 class="section-title">RECENT ARTICLES I WROTE</h2>
+
+  <div class="articles__list">
+    <!-- Article 1 -->
+	    <a class="article" href="https://medium.com/@debnathc1/entropy-cross-entropy-and-kl-divergence-c191e91516de" target="_blank" rel="noopener noreferrer" aria-label="Article 1">
+	      <div class="article__thumb" aria-hidden="true">
+	        <!-- Replace src with your article image -->
+	        <img src="ocean.jpg" alt="">
+	      </div>
+
+	      <div class="article__body">
+	        <h3 class="article__title">Entropy, Cross-Entropy, and KL-Divergence</h3>
+	        <p class="article__desc">
+	          <br>Observing a variable gives us information about the probability distribution it is drawn from, and entropy, cross-entropy, and KL divergence provide a principled way to quantify uncertainty and the cost of modeling that distribution incorrectly.
+	        </p>
+	      </div>
+	    </a>
+
+	    <!-- Article 2 -->
+	    <a class="article" href="https://medium.com/@debnathc1/one-entropy-two-languages-entropy-in-information-theory-and-thermodynamics-bdf5ca10e66b?postPublishedType=initial" target="_blank" rel="noopener noreferrer" aria-label="Article 2">
+	      <div class="article__thumb" aria-hidden="true">
+	        <!-- Replace src with your article image -->
+	        <img src="turner.jpg" alt="">
+	      </div>
+
+	      <div class="article__body">
+	        <h3 class="article__title">One Entropy, Two Languages: Entropy in Information Theory and Thermodynamics</h3>
+	        <p class="article__desc">
+	          <br>The same notion of entropy underlies both information theory and thermodynamics, despite their different interpretations. In both cases, it quantifies uncertainty about the true state of a system.
+	        </p>
+	      </div>
+	    </a>
+	    </a>
+	  </div>
+	</section>
+
+	<hr style="margin-left: 300px; margin-right: 300px" />
+
+
+
+		<section class="carousel" aria-label="Currently Reading">
+		  <h2 class="carousel__title">RECENT FAVORITE READS</h2>
+
+		  <div class="carousel__frame">
+		    <button
+		      class="carousel__btn carousel__btn--prev"
+		      type="button"
+		      aria-label="Scroll left">
+		      
+		    </button>
+
+		    <div
+		      class="carousel__track"
+		      id="bookTrack"
+		      tabindex="0"
+		      aria-label="Scrollable book covers"
+		    >
+		      <!-- Add your books here -->
+		      <a class="carousel__item" href="https://www.goodreads.com/book/show/223854881-what-we-can-know" aria-label="book1">
+		        <img src="whatwecanknow.jpg" alt="Book 1 cover">
+		      </a>
+
+		      <a class="carousel__item" href="https://www.goodreads.com/book/show/54493401-project-hail-mary" aria-label="book2">
+		        <img src="projecthailmary.jpg" alt="Book 2 cover">
+		      </a>
+
+		      <a class="carousel__item" href="https://www.goodreads.com/book/show/11012.Dubliners" aria-label="book3">
+		        <img src="dubliners.jpg" alt="Book 3 cover">
+		      </a>
+
+		      <a class="carousel__item" href="https://www.goodreads.com/book/show/123103725-brushed-aside" aria-label="book4">
+		        <img src="brushedaside.jpg" alt="Book 4 cover">
+		      </a>
+
+		      <a class="carousel__item" href="https://www.goodreads.com/book/show/24611840-believe-me" aria-label="book5">
+		        <img src="believeme.jpg" alt="Book 5 cover">
+		      </a>
+		    </div>
+
+		    <button
+		      class="carousel__btn carousel__btn--next"
+		      type="button"
+		      aria-label="Scroll right">
+		      
+		    </button>
+		  </div>
+
+		  <div class="carousel__dots" id="bookDots" aria-hidden="true"></div>
+		</section>
 
 	</div>
+
+<style>
+	.profile-img {
+		float: left;
+		width: 150px; /* smaller size */
+		height: auto;
+		margin-right: 15px;
+		border: 1px solid black;
+	}
+
+	.carousel {
+	  max-width: 960px;
+	  margin: 2.5rem auto;
+	  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	}
+
+	.carousel__title {
+	  text-align: center;
+	  font-size: 1.2rem;
+	  letter-spacing: 0.12em;
+	  margin-bottom: 1rem;
+	  font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.55;
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+	}
+
+	.carousel__frame {
+	  position: relative;
+	  padding: 0.75rem 2.75rem;
+	  border: 1px solid #e5e5e5;
+	  border-radius: 8px;
+	  background: #fafafa;
+	}
+
+	.carousel__track {
+	  display: grid;
+	  grid-auto-flow: column;
+	  grid-auto-columns: 120px;   /* BOOK WIDTH */
+	  gap: 5rem;
+
+	  overflow-x: auto;
+	  scroll-snap-type: x mandatory;
+	  scroll-behavior: smooth;
+	  overscroll-behavior-x: contain;
+	}
+
+	.carousel__item {
+	  width: 120px;
+	  height: 180px;             /* BOOK HEIGHT */
+	  scroll-snap-align: start;
+	  border-radius: 6px;
+	  overflow: hidden;
+	  background: #fff;
+	  border: 1px solid #e0e0e0;
+	  text-decoration: none;
+	}
+
+	.carousel__item img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;         /* Ensures same size, no stretching */
+	  display: block;
+	}
+
+	.carousel__btn {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  width: 34px;
+	  height: 34px;
+	  border-radius: 999px;
+	  border: 1px solid #ddd;
+	  background: white;
+	  font-size: 20px;
+	  cursor: pointer;
+	  display: grid;
+	  place-items: center;
+	  user-select: none;
+	}
+
+	.carousel__btn--prev { left: 10px; }
+	.carousel__btn--next { right: 10px; }
+
+	.carousel__btn:disabled {
+	  opacity: 0.35;
+	  cursor: default;
+	}
+
+	/* Scrollbar (optional) */
+	.carousel__track::-webkit-scrollbar {
+	  height: 8px;
+	}
+	.carousel__track::-webkit-scrollbar-thumb {
+	  background: #ccc;
+	  border-radius: 999px;
+	}
+
+	/* Dots */
+	.carousel__dots {
+	  display: flex;
+	  justify-content: center;
+	  gap: 8px;
+	  margin-top: 10px;
+	}
+
+	.carousel__dot {
+	  width: 6px;
+	  height: 6px;
+	  border-radius: 50%;
+	  background: #cfcfcf;
+	}
+
+	.carousel__dot.is-active {
+	  background: #555;
+	}
+
+	/* --- Recent Articles --- */
+	.articles {
+	  max-width: 960px;
+	  margin: 2.5rem auto;
+	}
+
+	.section-title {
+	  text-align: center;
+	  letter-spacing: 0.12em;
+	  margin-bottom: 1rem;
+	  font-size: 1.5rem;
+	  font-weight: 400;
+	  line-height: 1.55;
+	  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+	}
+
+	.articles__list {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 14px;
+	}
+
+	.article {
+	  display: grid;
+	  grid-template-columns: 160px 1fr;
+	  gap: 16px;
+	  align-items: center;
+
+	  text-decoration: none;
+	  color: inherit;
+
+	  background: #fafafa;
+	  border: 1px solid #e5e5e5;
+	  border-radius: 8px;
+	  padding: 14px;
+	}
+
+	.article:hover {
+	  border-color: #d9d9d9;
+	  background: #f7f7f7;
+	}
+
+	.article__thumb {
+	  width: 160px;
+	  height: 100px;
+	  border-radius: 8px;
+	  overflow: hidden;
+	  border: 1px solid #e0e0e0;
+	  background: #fff;
+	}
+
+	.article__thumb img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  display: block;
+	  border: 0; /* prevents inheriting the global img border */
+	}
+
+	.article__title {
+	  margin: 0 0 6px;
+	  font-size: 1.6rem;
+	  font-weight: 400;
+	  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+	}
+
+	.article__desc {
+	  margin: 0;
+	  font-size: 1.4rem;
+	  line-height: 1.5;
+	  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+	  color: #333;
+	}
+
+	/* Mobile */
+	@media only screen and (max-device-width: 490px) {
+	  .article {
+	    grid-template-columns: 1fr;
+	  }
+
+	  .article__thumb {
+	    width: 100%;
+	    height: 160px;
+	  }
+	}
+
+
+</style>
+
+<script>
+  (function () {
+    const track = document.getElementById("bookTrack");
+    const dotsWrap = document.getElementById("bookDots");
+    const prev = document.querySelector(".carousel__btn--prev");
+    const next = document.querySelector(".carousel__btn--next");
+
+    const itemWidth = 120 + 12; // width + gap
+    const items = track.children;
+
+    function updateDots() {
+      dotsWrap.innerHTML = "";
+      const visible = Math.floor(track.offsetWidth / itemWidth);
+      const pages = Math.max(1, Math.ceil(items.length / visible));
+
+      for (let i = 0; i < pages; i++) {
+        const dot = document.createElement("span");
+        dot.className = "carousel__dot";
+        if (Math.round(track.scrollLeft / (itemWidth * visible)) === i) {
+          dot.classList.add("is-active");
+        }
+        dotsWrap.appendChild(dot);
+      }
+
+      prev.disabled = track.scrollLeft <= 0;
+      next.disabled =
+        track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+
+    prev.addEventListener("click", () => {
+      track.scrollBy({ left: -track.clientWidth, behavior: "smooth" });
+    });
+
+    next.addEventListener("click", () => {
+      track.scrollBy({ left: track.clientWidth, behavior: "smooth" });
+    });
+
+    track.addEventListener("scroll", updateDots);
+    window.addEventListener("resize", updateDots);
+
+    updateDots();
+  })();
+</script>
+
+
 
 </body>
 
