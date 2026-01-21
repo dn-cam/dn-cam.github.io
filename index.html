@@ -242,6 +242,11 @@
 
 	</div>
 
+			<!-- subtle "end of page" easter-egg link -->
+	<div class="eop">
+		<a class="eop__link" href="artworks.html" aria-label="Hidden link to artworks page">&lt;end of page&gt;</a>
+	</div>
+
 <style>
 	.profile-img {
 		float: left;
@@ -442,6 +447,26 @@
 	    width: 100%;
 	    height: 160px;
 	  }
+	}
+
+		/* --- End-of-page easter egg --- */
+	.eop {
+	  margin: 32px 0 12px;
+	  text-align: center;
+	}
+	.eop__link {
+	  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+	  font-size: 12px;
+	  letter-spacing: 0.08em;
+	  color: #bbb;
+	  text-decoration: none;
+	  opacity: 0.35;
+	}
+	.eop__link:hover,
+	.eop__link:focus {
+	  opacity: 0.9;
+	  color: #777;
+	  text-decoration: none;
 	}
 
 

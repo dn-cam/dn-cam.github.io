@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <title>Artworks</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    }
+
+    .content {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .page-title {
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.45;
+      margin: 18px 0 22px;
+      text-align: center;
+    }
+
+    /* Mosaic grid like the reference image */
+    .art-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-auto-rows: 220px;
+      gap: 14px;
+    }
+
+    .art-tile {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f3f3f3;
+      border: 1px solid #ededed;
+    }
+
+    .art-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border: 0;
+      transform: scale(1);
+      transition: transform 180ms ease;
+    }
+
+    .art-tile:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Spans to mimic the sample layout */
+    .art-grid .art-tile:nth-child(5) {
+      grid-column: 2 / 4; /* wide tile on row 2 */
+    }
+
+    .art-grid .art-tile:nth-child(9) {
+      grid-column: 1 / 3; /* wide tile on row 4 */
+    }
+
+    /* Responsive: 2-column mosaic */
+    @media (max-width: 992px) {
+      .art-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+      }
+
+      .art-grid .art-tile:nth-child(5),
+      .art-grid .art-tile:nth-child(9) {
+        grid-column: 1 / 3;
+      }
+    }
+
+    /* Responsive: 1-column stack */
+    @media (max-width: 560px) {
+      .art-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+      }
+
+      .art-grid .art-tile:nth-child(5),
+      .art-grid .art-tile:nth-child(9) {
+        grid-column: auto;
+      }
+    }
+
+    /* Lightbox overlay */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 10, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      cursor: zoom-out;
+    }
+
+    .lightbox-overlay img {
+      max-width: 92%;
+      max-height: 92%;
+      border-radius: 10px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      animation: zoomIn 0.2s ease-out;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.92);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Camellia Debnath</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="CV.html">Resumé</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content">
+    <p class="page-title">You found my hidden gallery. Enjoy.</p>
+
+    <div class="art-grid" aria-label="Artwork gallery">
+      <!-- Replace filenames with your real images -->
+      <div class="art-tile"><img src="artwork_01.jpg" alt="Artwork 1"></div>
+      <div class="art-tile"><img src="artwork_06.jpg" alt="Artwork 2"></div>
+      <div class="art-tile"><img src="artwork_05.jpg" alt="Artwork 3"></div>
+
+      <div class="art-tile"><img src="artwork_04.jpg" alt="Artwork 4"></div>
+      <div class="art-tile"><img src="artwork_03.jpg" alt="Artwork 5"></div>
+
+      <div class="art-tile"><img src="artwork_02.jpg" alt="Artwork 6"></div>
+      <div class="art-tile"><img src="artwork_07.jpg" alt="Artwork 7"></div>
+      <div class="art-tile"><img src="artwork_08.jpg" alt="Artwork 8"></div>
+
+      <div class="art-tile"><img src="artwork_09.jpg" alt="Artwork 9"></div>
+      <div class="art-tile"><img src="artwork_10.jpg" alt="Artwork 10"></div>
+    </div>
+  </div>
+    <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox">
+    <img id="lightbox-img" src="" alt="Expanded artwork">
+  </div>
+
+
+  <script>
+  const tiles = document.querySelectorAll('.art-tile img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  tiles.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+    document.body.style.overflow = 'auto';
+  });
+</script>
+
+</body>
+
+</html>
